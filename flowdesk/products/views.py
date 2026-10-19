@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import Product, Category
 from .forms import CategoryForm, ProductForm
+from django.shortcuts import render
 
 from .models import Product
 from .forms import ProductForm
@@ -10,19 +11,23 @@ from django.contrib.auth.decorators import login_required
 @login_required
 def product_list(request):
 
-   
     search = request.GET.get("search")
 
     products = Product.objects.all()
-    
+
     if search:
         products = products.filter(
             name__icontains=search
         )
-        
+
+    template = "products/product_list.html"
+
+    if request.htmx:
+        template = "products/partials/product_table.html"
+
     return render(
         request,
-        "products/product_list.html",
+        template,
         {"products": products}
     )
 

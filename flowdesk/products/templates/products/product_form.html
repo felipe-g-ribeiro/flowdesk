@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_css %}
+  <link rel="stylesheet" href="{% static 'css/product_form.css' %}" />
+{% endblock %}
+
+{% block content %}
+  <div class="form-card">
+    <h1>Novo Produto</h1>
+
+    <form method="post">
+      {% csrf_token %}
+
+      <div class="mb-4">
+        <label>Nome</label>
+        {{ form.name }}
+      </div>
+
+      <div class="mb-4">
+        <label>Categoria</label>
+        {{ form.category }}
+      </div>
+
+      <div class="mb-4">
+        <label>Preço</label>
+        {{ form.price }}
+      </div>
+
+      <div class="mb-4">
+        <label>Estoque</label>
+        {{ form.stock }}
+      </div>
+
+      <button type="submit" class="btn btn-success">Salvar Produto</button>
+
+      <a href="{% url 'product_list' %}" class="btn btn-secondary">Cancelar</a>
+    </form>
+  </div>
+{% endblock %}

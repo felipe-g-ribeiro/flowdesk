@@ -1,0 +1,46 @@
+body {
+    background-color: #f5f7fb;
+}
+
+.navbar {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.4rem;
+
+}
+
+.card {
+    border: none;
+    border-radius: 16px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+}
+
+.card h2 {
+    font-weight: bold;
+}
+
+.page-title {
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.content-wrapper {
+    margin-top: 30px;
+}
+
+.menu-direita {
+    justify-content: flex-end;
+}
+
+#navbarNav {
+    justify-content: flex-end;
+}

@@ -1,0 +1,100 @@
+.form-card {
+    max-width: 850px;
+    margin: 50px auto;
+    padding: 50px;
+
+    background: rgba(20, 25, 35, 0.95);
+
+    border-radius: 25px;
+
+    border-top: 2px solid #53fff1;
+
+    box-shadow:
+        0 0 25px rgba(86, 255, 247, 0.15),
+        0 0 50px rgba(255, 128, 219, 0.08);
+}
+
+.form-card h1 {
+    color: white;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.form-card form {
+    width: 100%;
+}
+
+.form-card label {
+    display: block;
+    color: #d9e1ea;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.form-control,
+.form-select {
+    width: 100%;
+
+    background: white;
+    color: black;
+
+    border: 2px solid rgba(255, 255, 255, 0.15);
+
+    border-radius: 15px;
+
+    height: 60px;
+
+    padding: 10px 20px;
+
+    text-align: center;
+
+    box-sizing: border-box;
+}
+
+.form-control:focus,
+.form-select:focus {
+    background: white;
+
+    color: black;
+
+    border-color: #53fff1;
+
+    box-shadow: 0 0 20px rgba(83, 255, 241, .3);
+}
+
+.form-select option {
+    background: white;
+    color: black;
+}
+
+.btn-success {
+    background: #00c896;
+    border: none;
+
+    border-radius: 14px;
+
+    padding: 12px 30px;
+
+    font-weight: 600;
+}
+
+.btn-success:hover {
+    background: #00b385;
+}
+
+.btn-secondary {
+    border-radius: 14px;
+
+    padding: 12px 30px;
+
+    font-weight: 600;
+}
+
+.mb-4 {
+    margin-bottom: 25px;
+}

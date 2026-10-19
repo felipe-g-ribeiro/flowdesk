@@ -9,8 +9,17 @@ from django.contrib.auth.decorators import login_required
 
 @login_required
 def product_list(request):
-    products = Product.objects.all()
 
+   
+    search = request.GET.get("search")
+
+    products = Product.objects.all()
+    
+    if search:
+        products = products.filter(
+            name__icontains=search
+        )
+        
     return render(
         request,
         "products/product_list.html",

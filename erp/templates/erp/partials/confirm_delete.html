@@ -1,0 +1,14 @@
+<div class="modal-header">
+  <h5 class="modal-title">Confirmar exclusão</h5>
+  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<form method="post">
+  <div class="modal-body">
+    {% csrf_token %}
+    <p>Tem certeza que deseja remover <strong>{{ object }}</strong>?</p>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancelar</button>
+    <button type="submit" class="btn btn-danger">Remover</button>
+  </div>
+</form>

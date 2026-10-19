@@ -1,0 +1,23 @@
+<div class="card mb-3">
+  <div class="card-header">Adicionar item</div>
+  <div class="card-body">
+    <form method="post" action="{% url 'erp:venda_item_create' object.pk %}" hx-post="{% url 'erp:venda_item_create' object.pk %}" hx-target="#items-section" hx-swap="outerHTML">
+      {% csrf_token %}
+      {{ item_form.as_p }}
+      <button class="btn btn-primary" type="submit">Adicionar item</button>
+    </form>
+  </div>
+</div>
+<div class="card">
+  <div class="table-responsive">
+    <table class="table table-striped mb-0">
+      <thead><tr><th>Produto</th><th>Quantidade</th><th>Preço unitário</th><th>Subtotal</th></tr></thead>
+      <tbody>
+        {% include "erp/partials/item_rows.html" %}
+      </tbody>
+      <tfoot>
+        <tr><th colspan="3" class="text-end">Total</th><th>R$ {{ object.total }}</th></tr>
+      </tfoot>
+    </table>
+  </div>
+</div>

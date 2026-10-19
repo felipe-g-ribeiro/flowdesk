@@ -1,0 +1,26 @@
+{% extends "erp/base.html" %}
+{% block title %}Dashboard - Flowdesk ERP{% endblock %}
+{% block content %}
+<h1 class="h3 mb-3">Dashboard</h1>
+<div class="row g-3 mb-4">
+  <div class="col-md-3"><div class="card"><div class="card-body"><h2 class="h6">Produtos</h2><p class="display-6 mb-0">{{ indicadores.produtos }}</p></div></div></div>
+  <div class="col-md-3"><div class="card"><div class="card-body"><h2 class="h6">Categorias</h2><p class="display-6 mb-0">{{ indicadores.categorias }}</p></div></div></div>
+  <div class="col-md-3"><div class="card"><div class="card-body"><h2 class="h6">Clientes</h2><p class="display-6 mb-0">{{ indicadores.clientes }}</p></div></div></div>
+  <div class="col-md-3"><div class="card"><div class="card-body"><h2 class="h6">Vendas</h2><p class="display-6 mb-0">{{ indicadores.vendas }}</p></div></div></div>
+</div>
+<div class="card">
+  <div class="card-header">Produtos mais vendidos</div>
+  <div class="table-responsive">
+    <table class="table table-striped mb-0">
+      <thead><tr><th>Produto</th><th>Vezes em vendas</th></tr></thead>
+      <tbody>
+      {% for produto in top_produtos %}
+        <tr><td>{{ produto.nome }}</td><td>{{ produto.total_vendas }}</td></tr>
+      {% empty %}
+        <tr><td colspan="2" class="text-center py-4">Sem dados</td></tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock %}

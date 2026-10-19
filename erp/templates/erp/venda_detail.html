@@ -1,0 +1,18 @@
+{% extends "erp/base.html" %}
+{% block title %}Venda #{{ object.pk }} - Flowdesk ERP{% endblock %}
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-3">
+  <h1 class="h3 mb-0">Venda #{{ object.pk }}</h1>
+  <a href="{% url 'erp:venda_list' %}" class="btn btn-outline-secondary">Voltar</a>
+</div>
+<div class="card mb-3">
+  <div class="card-body">
+    <p class="mb-1"><strong>Cliente:</strong> {{ object.cliente.nome }}</p>
+    <p class="mb-1"><strong>Criada em:</strong> {{ object.criada_em|date:'d/m/Y H:i' }}</p>
+    <p class="mb-0"><strong>Observações:</strong> {{ object.observacoes|default:'-' }}</p>
+  </div>
+</div>
+<div id="items-section">
+  {% include "erp/partials/sale_items_section.html" %}
+</div>
+{% endblock %}

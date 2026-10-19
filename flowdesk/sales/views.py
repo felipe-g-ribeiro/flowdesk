@@ -7,7 +7,9 @@ from django.shortcuts import (
 from .models import Sale
 from .forms import SaleForm
 
+from django.contrib.auth.decorators import login_required
 
+@login_required
 def sale_list(request):
     sales = Sale.objects.all()
 
@@ -17,7 +19,7 @@ def sale_list(request):
         {"sales": sales}
     )
 
-
+@login_required
 def sale_create(request):
     form = SaleForm(request.POST or None)
 
@@ -60,7 +62,7 @@ def sale_create(request):
        
 
 
-
+@login_required
 def sale_update(request, pk):
     sale = get_object_or_404(
         Sale,
@@ -83,6 +85,9 @@ def sale_update(request, pk):
     )
 
 
+
+
+@login_required
 def sale_delete(request, pk):
     sale = get_object_or_404(
         Sale,

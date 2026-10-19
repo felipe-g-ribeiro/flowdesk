@@ -3,8 +3,9 @@ from django.shortcuts import render
 from products.models import Product, Category
 from customers.models import Customer
 from sales.models import Sale
+from django.contrib.auth.decorators import login_required
 
-
+@login_required
 def dashboard(request):
     context = {
         "total_products": Product.objects.count(),

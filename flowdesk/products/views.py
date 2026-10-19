@@ -5,7 +5,9 @@ from .forms import CategoryForm, ProductForm
 from .models import Product
 from .forms import ProductForm
 
+from django.contrib.auth.decorators import login_required
 
+@login_required
 def product_list(request):
     products = Product.objects.all()
 
@@ -15,7 +17,7 @@ def product_list(request):
         {"products": products}
     )
 
-
+@login_required
 def product_create(request):
     form = ProductForm(request.POST or None)
 
@@ -29,7 +31,7 @@ def product_create(request):
         {"form": form}
     )
 
-
+@login_required
 def product_update(request, pk):
     product = get_object_or_404(
         Product,
@@ -51,6 +53,7 @@ def product_update(request, pk):
         {"form": form}
     )
 
+@login_required
 def product_delete(request, pk):
     product = get_object_or_404(
         Product,
@@ -61,6 +64,7 @@ def product_delete(request, pk):
 
     return redirect("product_list")
 
+@login_required
 def category_list(request):
     categories = Category.objects.all()
 
@@ -70,7 +74,7 @@ def category_list(request):
         {"categories": categories}
     )
 
-
+@login_required
 def category_create(request):
     form = CategoryForm(request.POST or None)
 
@@ -84,7 +88,7 @@ def category_create(request):
         {"form": form}
     )
 
-
+@login_required
 def category_update(request, pk):
     category = get_object_or_404(
         Category,
@@ -106,7 +110,7 @@ def category_update(request, pk):
         {"form": form}
     )
 
-
+@login_required
 def category_delete(request, pk):
     category = get_object_or_404(
         Category,

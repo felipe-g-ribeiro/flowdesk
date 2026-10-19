@@ -32,6 +32,11 @@
 
         <div class="collapse navbar-collapse menu-direita" id="navbarNav">
           <ul class="navbar-nav ms-auto">
+            {% if user.is_authenticated %}
+              <li class="nav-item">
+                <span class="nav-link">Olá, {{ user.username }}</span>
+              </li>
+            {% endif %}
             <li class="nav-item">
               <a class="nav-link" href="/">Dashboard</a>
             </li>
@@ -51,6 +56,14 @@
             <li class="nav-item">
               <a class="nav-link" href="{% url 'sale_list' %}">Vendas</a>
             </li>
+            {% if user.is_authenticated %}
+              <li class="nav-item">
+                <form method="post" action="{% url 'logout' %}" class="d-inline">
+                  {% csrf_token %}
+                  <button type="submit" class="nav-link btn btn-link">Sair</button>
+                </form>
+              </li>
+            {% endif %}
           </ul>
         </div>
       </div>

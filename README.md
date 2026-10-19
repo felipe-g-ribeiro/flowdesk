@@ -1,6 +1,6 @@
 # FlowDesk
 
-Sistema ERP web desenvolvido com Django, HTMX e Bootstrap para gerenciamento de produtos, clientes, vendas e estoque.
+Sistema ERP web desenvolvido com Django, HTMX, Bootstrap e PostgreSQL para gerenciamento de produtos, clientes, vendas e estoque.
 
 ## Funcionalidades
 
@@ -19,23 +19,14 @@ Sistema ERP web desenvolvido com Django, HTMX e Bootstrap para gerenciamento de 
 - Django
 - HTMX
 - Bootstrap
-- SQLite
+- PostgreSQL
 - Git
 - GitHub
 
-## Estrutura do Projeto
-
-- Produtos
-- Categorias
-- Clientes
-- Vendas
-- Dashboard
-
 ## Objetivo
 
-Este projeto foi desenvolvido com foco em aprendizado e prática de desenvolvimento web utilizando Django, seguindo conceitos de aplicações empresariais reais.
+Desenvolver uma aplicação de gestão empresarial moderna para praticar conceitos de desenvolvimento web com Django e HTMX.
 
 ## Autor
 
 Felipe Gonçalves Ribeiro
-

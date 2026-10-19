@@ -35,7 +35,7 @@ body {
 
     background: rgba(255, 255, 255, .08);
 
-    color: white;
+    color: #212529;
 
     border: 1px solid rgba(255, 255, 255, .2);
 
@@ -54,7 +54,8 @@ body {
 
     background: rgba(255, 255, 255, .1);
 
-    color: white;
+    color: #212529;
+    border-color: #22d3ee;
 }
 
 label {

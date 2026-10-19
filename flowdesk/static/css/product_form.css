@@ -56,6 +56,14 @@
     box-sizing: border-box;
 }
 
+.category-input {
+    border: 2px solid #ced4da !important;
+
+}
+
+
+
+
 .form-control:focus,
 .form-select:focus {
     background: white;
@@ -97,4 +105,23 @@
 
 .mb-4 {
     margin-bottom: 25px;
+}
+
+
+#id_name.category-input {
+    background-color: #ffffff;
+    color: #212529;
+    border: 2px solid #ced4da;
+    text-align: center;
+}
+
+#id_name.category-input::placeholder {
+    color: #6c757d;
+}
+
+#id_name.category-input:focus {
+    background-color: #ffffff;
+    color: #212529;
+    border-color: #53fff1;
+    box-shadow: 0 0 20px rgba(83, 255, 241, 0.3);
 }

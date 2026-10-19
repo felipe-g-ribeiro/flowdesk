@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block extra_css %}
+  <link rel="stylesheet" href="{% static 'css/product_form.css' %}" />
+{% endblock %}
+
+{% block content %}
+  <div class="card p-4 shadow-sm">
+    <h2 class="mb-4">Categoria</h2>
+
+    <form method="post">
+      {% csrf_token %}
+
+      {{ form.as_p }}
+
+      <button type="submit" class="btn btn-success">Salvar</button>
+
+      <a href="{% url 'category_list' %}" class="btn btn-secondary">Cancelar</a>
+    </form>
+  </div>
+{% endblock %}

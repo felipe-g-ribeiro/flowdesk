@@ -2,6 +2,10 @@
 
 Sistema ERP web desenvolvido com Django, HTMX, Bootstrap e PostgreSQL para gerenciamento de produtos, clientes, vendas e estoque.
 
+## Demo
+
+https://flowdesk-vy6q.onrender.com
+
 ## Funcionalidades
 
 - Autenticação de usuários

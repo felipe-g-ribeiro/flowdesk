@@ -8,13 +8,16 @@ class ProductForm(forms.ModelForm):
         model = Product
         fields = "__all__"
         widgets = {
-            "name": forms.TextInput(attrs={"class": "form-control"}),
+            "name": forms.TextInput(attrs={"class": "form-control", "style": "color: #ffffff;"}),
             "category": forms.Select(attrs={"class": "form-select"}),
-            "price": forms.NumberInput(attrs={"class": "form-control"}),
+            "price": forms.NumberInput(attrs={"class": "form-control", "style": "color: #ffffff;"}),
             "stock": forms.NumberInput(
                 attrs={
                     "class": "form-control",
                     "style": "text-align: center;",
+                    "style": "color: #ffffff;",
+
+                    
                 }
             ),
         }

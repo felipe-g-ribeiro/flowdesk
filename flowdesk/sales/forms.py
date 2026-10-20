@@ -16,13 +16,13 @@ class SaleForm(forms.ModelForm):
         }
         widgets = {
             "customer": forms.Select(
-                attrs={"class": "form-control customer-input", "style": "background-color: #fff; color: #212529;"}
+                attrs={"class": "form-control customer-input", "style":"border: 1px solid #000;" "background-color: #fff; color: #212529;"}
             ),
             "product": forms.Select(
-                attrs={"class": "form-control customer-input", "style": "background-color: #fff; color: #212529;"}
+                attrs={"class": "form-control customer-input", "style":"border: 1px solid #000;" "background-color: #fff; color: #212529;"}
             ),
             "quantity": forms.NumberInput(
-                attrs={"class": "form-control customer-input", "style": "background-color: #fff; color: #212529;"}
+                attrs={"class": "form-control customer-input", "style":"border: 1px solid #000;" "background-color: #fff; color: #212529;"}
             ),
             "total": forms.NumberInput(
                 attrs={"class": "form-control customer-input", "style": "background-color: #fff; color: #212529;"}

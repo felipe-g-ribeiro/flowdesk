@@ -13,12 +13,12 @@ class CustomerForm(forms.ModelForm):
         }
         widgets = {
             "name": forms.TextInput(
-                attrs={"class": "form-control customer-input", "style": "background-color: #fff; color: #212529;"}
+                attrs={"class": "form-control customer-input", "style": "border: 1px solid #000;" "background-color: #fff; color: #212529;"}
             ),
             "email": forms.EmailInput(
-                attrs={"class": "form-control customer-input", "style": "background-color: #fff; color: #212529;"}
+                attrs={"class": "form-control customer-input", "style":"border: 1px solid #000;" "background-color: #fff; color: #212529;"}
             ),
             "phone": forms.TextInput(
-                attrs={"class": "form-control customer-input", "style": "background-color: #fff; color: #212529;"}
+                attrs={"class": "form-control customer-input", "style":"border: 1px solid #000;" "background-color: #fff; color: #212529;"}
             ),
         }
